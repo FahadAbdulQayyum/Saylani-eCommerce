@@ -8,9 +8,11 @@ const ProductItems = ({items}) => {
     return (
         <Card
             hoverable
-            style={{
-                width: 240,
-            }}
+            // style={{
+            //     width: 240,
+            // }}
+            className='w-96 h-fit'
+            // className='w-full h-48'
             cover={<img alt="example" src={items.img} />}
         >
             <Meta title={items.name} description="www.instagram.com" />
