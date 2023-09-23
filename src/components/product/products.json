@@ -1,17 +1,20 @@
 [
     {
+        "id":1,
         "name":"Lux Soap",
         "price":100,
         "img":"https://cdnprod.mafretailproxy.com/sys-master-root/h41/h24/49602890334238/1700Wx1700H_245519_main.jpg",
         "desc":"lorem epsum lorem epsum lorem epsum lorem epsum"
     },
     {
+        "id":2,
         "name":"Head Shoulder Shampoo",
         "price":100,
         "img":"https://cdn.fishry.com/product/Head---Shoulders-Anti-dandruff-Classic-Clean-Shampoo--185-ml-1760536-my-vitamin-store.png",
         "desc":"lorem epsum lorem epsum lorem epsum lorem epsum"
     },
     {
+        "id":3,
         "name":"Mango",
         "price":100,
         "img":"https://images3.alphacoders.com/116/1167666.jpg",
