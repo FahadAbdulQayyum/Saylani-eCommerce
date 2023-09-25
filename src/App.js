@@ -28,46 +28,9 @@ const App = () => {
     },
   ]);
 
-  // Handles input change event and updates state
-  // const handleChange = event => {
-  //   if(!event.target.files[0]){
-  //     return alert("Please choose a file first");
-  //   }
-  //   const storageRef = ref(storage, `/files/${file.name}`)
-  //   setFile(event.target.files[0]);
-  // }
-
   function handleChange(event) {
     setFile(event.target.files[0]);
   }
-
-  // function handleUpload() {
-  //     if (!file) {
-  //         alert("Please choose a file first!")
-  //     }
-
-  //     const storageRef = ref(storage,`/files/${file.name}`)
-  //     const uploadTask = uploadBytesResumable(storageRef, file);
-
-  //     uploadTask.on(
-  //         "state_changed",
-  //         (snapshot) => {
-  //             const percent = Math.round(
-  //                 (snapshot.bytesTransferred / snapshot.totalBytes) * 100
-  //             );
-
-  //             // update progress
-  //             setPercent(percent);
-  //         },
-  //         (err) => console.log(err),
-  //         () => {
-  //             // download url
-  //             getDownloadURL(uploadTask.snapshot.ref).then((url) => {
-  //                 console.log(url);
-  //             });
-  //         }
-  //     ); 
-  // }
 
   const handleUpload = () => {
     if (!file) {
@@ -93,9 +56,10 @@ const App = () => {
         // download url
         getDownloadURL(uploadTask.snapshot.ref).then((url) => {
           console.log(url);
+          setFile(prev=>"")
         });
       }
-    );
+      );
   };
 
   return (
