@@ -66,9 +66,12 @@ const App = () => {
     <div className='flex flex-col'>
       <RouterProvider router={router} />
       <div>
+        <input type="text" className='border my-1 p-2' placeholder="Enter your product's Name"/><br/>
+        <input type="text" className='border my-1 p-2' placeholder="Enter your product's Desc"/><br/>
+        <input type="Number" className='border my-1 p-2' placeholder="Enter your product's Price"/><br/>
         <input type="file" accept="image/*" onChange={handleChange} />
         <button className='bg-slate-600 text-white py-2 w-52 mt-3' onClick={handleUpload}>Upload to Firebase</button>
-        <p>{percent}"% done"</p>
+        <p>{percent}% done</p>
       </div>
     </div>
   );
