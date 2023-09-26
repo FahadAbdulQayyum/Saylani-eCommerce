@@ -68,6 +68,7 @@ const App = () => {
       <div>
         {/* Product's name input field */}
         <input type="text" className='border my-1 p-2' placeholder="Enter your product's Name"/><br/>
+        {/* Product's description input field */}
         <input type="text" className='border my-1 p-2' placeholder="Enter your product's Desc"/><br/>
         <input type="Number" className='border my-1 p-2' placeholder="Enter your product's Price"/><br/>
         <input type="file" accept="image/*" onChange={handleChange} />
