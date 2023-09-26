@@ -15,7 +15,9 @@ import {
 
 const App = () => {
 
+  // percent state
   const [percent, setPercent] = useState(0);
+  // file state
   const [file, setFile] = useState("");
 
   const router = createBrowserRouter([
