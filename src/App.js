@@ -31,6 +31,7 @@ const App = () => {
     },
   ]);
 
+  // This function helps in storing the images/file in the file state
   function handleChange(event) {
     setFile(event.target.files[0]);
   }
