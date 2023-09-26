@@ -52,7 +52,7 @@ const App = () => {
           (snapshot.bytesTransferred / snapshot.totalBytes) * 100
         );
 
-        // update progress
+        // update progress 
         setPercent(percent);
       },
       (err) => console.log(err),
