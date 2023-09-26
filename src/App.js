@@ -76,6 +76,7 @@ const App = () => {
         <input type="file" accept="image/*" onChange={handleChange} />
         {/* This is button for uploading the image and hopefully for the data too to the firebase */}
         <button className='bg-slate-600 text-white py-2 w-52 mt-3' onClick={handleUpload}>Upload to Firebase</button>
+        {/* This helps us to know the percentage of the process made when the image or data is transfered/ uploaded to the firebase cloud */}
         <p>{percent}% done</p>
       </div>
     </div>
