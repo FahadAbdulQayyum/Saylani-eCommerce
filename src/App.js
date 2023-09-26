@@ -66,6 +66,7 @@ const App = () => {
     <div className='flex flex-col'>
       <RouterProvider router={router} />
       <div>
+        {/* Product's name input field */}
         <input type="text" className='border my-1 p-2' placeholder="Enter your product's Name"/><br/>
         <input type="text" className='border my-1 p-2' placeholder="Enter your product's Desc"/><br/>
         <input type="Number" className='border my-1 p-2' placeholder="Enter your product's Price"/><br/>
