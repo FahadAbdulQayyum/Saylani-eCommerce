@@ -5,6 +5,7 @@ import {
 } from "react-router-dom";
 import Home from './components/home/Home'
 import Product from './components/product/Product';
+// This is the firebase Storage configuration and connected to the Firebase
 import storage from './components/firebase/firebaseConfig'
 import {
   ref,
@@ -56,6 +57,7 @@ const App = () => {
         // download url
         getDownloadURL(uploadTask.snapshot.ref).then((url) => {
           console.log(url);
+          // This then empty the file to avoid reuploading the same image or data
           setFile(prev=>"")
         });
       }
@@ -64,6 +66,7 @@ const App = () => {
 
   return (
     <div className='flex flex-col'>
+      {/* This is routing  */}
       <RouterProvider router={router} />
       <div>
         {/* Product's name input field */}
