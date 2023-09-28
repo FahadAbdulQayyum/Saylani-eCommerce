@@ -44,6 +44,7 @@ const App = () => {
       alert("Please upload an image first!");
     }
 
+    // This then refer the file and create a place in firebase and name it as file's name from the computer system
     const storageRef = ref(storage, `/files/${file.name}`);
 
     const uploadTask = uploadBytesResumable(storageRef, file);
