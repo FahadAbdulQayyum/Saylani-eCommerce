@@ -47,6 +47,7 @@ const App = () => {
     // This then refer the file and create a place in firebase and name it as file's name from the computer system
     const storageRef = ref(storage, `/files/${file.name}`);
 
+    // This process aheads successfully and with the help this we can determine the bytes uploading and can calculate the percentage accordingly
     const uploadTask = uploadBytesResumable(storageRef, file);
 
     uploadTask.on(
