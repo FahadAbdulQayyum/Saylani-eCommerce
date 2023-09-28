@@ -37,6 +37,7 @@ const App = () => {
     setFile(event.target.files[0]);
   }
 
+  // This function is supposed to handle the uploading process
   const handleUpload = () => {
     if (!file) {
       alert("Please upload an image first!");
