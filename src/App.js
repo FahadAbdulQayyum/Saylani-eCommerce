@@ -39,6 +39,7 @@ const App = () => {
 
   // This function is supposed to handle the uploading process
   const handleUpload = () => {
+    // In case of no file uploaded and upload button is pressed for uploading a file then this error alerts to users
     if (!file) {
       alert("Please upload an image first!");
     }
