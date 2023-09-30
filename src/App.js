@@ -23,7 +23,9 @@ const App = () => {
 
   const router = createBrowserRouter([
     {
+      // path is '/'
       path: "/",
+      // on Home component is appeared on path = '/'
       element: <Home />
     },
     {
