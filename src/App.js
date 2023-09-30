@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import {
   createBrowserRouter,
   RouterProvider,
@@ -12,6 +12,8 @@ import {
   uploadBytesResumable,
   getDownloadURL
 } from "firebase/storage";
+
+import Retrieve from './components/retrieve/Retrieve'
 
 const App = () => {
 
@@ -29,6 +31,11 @@ const App = () => {
       path: "/product",
       element: <Product />
     },
+    {
+      path: "/retrieveData",
+      element: <Retrieve />
+    },
+
   ]);
 
   // This function helps in storing the images/file in the file state
@@ -66,6 +73,17 @@ const App = () => {
       }
       );
   };
+
+//   function displayImage(imageRef) {
+//     imageRef.getDownloadURL().then(function(url) {
+//         setImageUrl.push(url);
+//     // TODO: Display the image on the UI
+//     }).catch(function(error) {
+//     // Handle any errors
+//     });
+// }
+
+// displayImage();
 
   return (
     <div className='flex flex-col'>
