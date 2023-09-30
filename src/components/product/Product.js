@@ -1,4 +1,5 @@
 import React from 'react';
+// importing products.json for using here
 import Products from './products.json'
 import ProductItems from './ProductItems';
 
