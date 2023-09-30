@@ -6,7 +6,8 @@ import {
 import Home from './components/home/Home'
 import Product from './components/product/Product';
 // This is the firebase Storage configuration and connected to the Firebase
-import storage from './components/firebase/firebaseConfig'
+// import storage from './components/firebase/firebaseConfig'
+import {storage} from './components/firebase/firebaseConfig'
 import {
   ref,
   uploadBytesResumable,
@@ -15,6 +16,7 @@ import {
 } from "firebase/storage";
 
 import Retrieve from './components/retrieve/Retrieve'
+import UploadData from './components/uploadData/UploadData';
 
 const App = () => {
 
@@ -35,6 +37,12 @@ const App = () => {
       path: "/product",
       // on Product component is appeared on path = '/product'
       element: <Product />
+    },
+    {
+      // path is '/product'
+      path: "/addProduct",
+      // on Product component is appeared on path = '/product'
+      element: <UploadData />
     },
     {
       path: "/retrieveData",
