@@ -1,35 +1,34 @@
 import React, { useEffect, useState } from 'react';
-import { storage } from '../firebase/firebaseConfig';
+import { storage, txtDb } from '../firebase/firebaseConfig';
+import { collection, getDocs } from 'firebase/firestore';
 // import storage from '../firebase/firebaseConfig';
 
 function ImageComponent() {
-  const [imageUrl, setImageUrl] = useState(null);
+  const [imagesUrl, setImagesUrl] = useState([null]);
 
   useEffect(() => {
-    // Reference to the image file in Firebase Storage
-    // const imageRef = storage.ref('/files'); // Replace with the path to your image
-
-    // console.log('imageRef', imageRef)
-    console.log('imageRef',storage)
-
-    // Get the download URL for the image
-//     imageRef.getDownloadURL()
-//       .then(url => {
-//         // Set the retrieved URL to the state variable
-//         setImageUrl(url);
-//       })
-//       .catch(error => {
-//         console.error('Error getting download URL: ', error);
-//       });
+    getData();
   }, []);
+
+  const getData = async () => {
+    const valRef = collection(txtDb, 'txtData')
+    const dataDb = await getDocs(valRef)
+    const allData = dataDb.docs.map(val=>({...val.data(), id:val.id}))
+    setImagesUrl(allData)
+    console.log('allData',allData);
+  }
 
   return (
     <div>
-      {/* {imageUrl ? (
-        <img src={imageUrl} alt="Uploaded" />
-      ) : (
-        <p>Loading...</p>
-      )} */}
+      <h1>Welcome to Retrieve Data from Firebase</h1>
+      {
+        imagesUrl.map((v,i)=>{
+          return (
+            <img key={i} src={v?.imgUrl}/>
+          )
+          // console.log('v',v)
+        })
+      }
     </div>
   );
 }
