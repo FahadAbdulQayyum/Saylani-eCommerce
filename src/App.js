@@ -29,7 +29,9 @@ const App = () => {
       element: <Home />
     },
     {
+      // path is '/product'
       path: "/product",
+      // on Product component is appeared on path = '/product'
       element: <Product />
     },
   ]);
