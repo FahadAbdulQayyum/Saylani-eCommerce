@@ -1,6 +1,7 @@
 import React from 'react';
 // importing products.json for using here
 import Products from './products.json'
+// ProductItems imported for aligning and styling the products' array in another component for better readibility
 import ProductItems from './ProductItems';
 
 const Product = () => {
