@@ -6,28 +6,29 @@ function ImageComponent() {
 
   useEffect(() => {
     // Reference to the image file in Firebase Storage
-    const imageRef = storage.ref('/files'); // Replace with the path to your image
+    // const imageRef = storage.ref('/files'); // Replace with the path to your image
 
-    console.log('imageRef', imageRef)
+    // console.log('imageRef', imageRef)
+    console.log('imageRef',storage)
 
     // Get the download URL for the image
-    imageRef.getDownloadURL()
-      .then(url => {
-        // Set the retrieved URL to the state variable
-        setImageUrl(url);
-      })
-      .catch(error => {
-        console.error('Error getting download URL: ', error);
-      });
+//     imageRef.getDownloadURL()
+//       .then(url => {
+//         // Set the retrieved URL to the state variable
+//         setImageUrl(url);
+//       })
+//       .catch(error => {
+//         console.error('Error getting download URL: ', error);
+//       });
   }, []);
 
   return (
     <div>
-      {imageUrl ? (
+      {/* {imageUrl ? (
         <img src={imageUrl} alt="Uploaded" />
       ) : (
         <p>Loading...</p>
-      )}
+      )} */}
     </div>
   );
 }

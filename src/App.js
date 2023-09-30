@@ -11,6 +11,7 @@ import {
   ref,
   uploadBytesResumable,
   getDownloadURL
+  
 } from "firebase/storage";
 
 import Retrieve from './components/retrieve/Retrieve'
@@ -82,17 +83,6 @@ const App = () => {
       }
       );
   };
-
-//   function displayImage(imageRef) {
-//     imageRef.getDownloadURL().then(function(url) {
-//         setImageUrl.push(url);
-//     // TODO: Display the image on the UI
-//     }).catch(function(error) {
-//     // Handle any errors
-//     });
-// }
-
-// displayImage();
 
   return (
     <div className='flex flex-col'>
