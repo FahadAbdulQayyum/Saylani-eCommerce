@@ -8,7 +8,7 @@ const Product = () => {
 
   return (
     <span className='flex space-x-5 m-5'>
-          // Products' array is spread using map
+          {/*  Products' array is spread using map */}
           {Products.map(item => <ProductItems key={item.id} items={item}/>
           )}
     </span>
