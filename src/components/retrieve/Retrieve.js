@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { storage, txtDb } from '../firebase/firebaseConfig';
+import { txtDb } from '../firebase/firebaseConfig';
 import { collection, getDocs } from 'firebase/firestore';
 // import storage from '../firebase/firebaseConfig';
 
@@ -24,7 +24,12 @@ function ImageComponent() {
       {
         imagesUrl.map((v,i)=>{
           return (
-            <img key={i} src={v?.imgUrl}/>
+            <span>
+              <img key={i} src={v?.imgUrl}/>
+              <h3>{v?.prodName}</h3>
+              <p>{v?.prodDesc}</p>
+              <h1>{v?.prodPrice}</h1>
+            </span>
           )
           // console.log('v',v)
         })

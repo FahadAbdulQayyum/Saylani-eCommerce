@@ -1,30 +1,30 @@
 [
     {
         "id":1,
-        "name":"Lux Soap",
-        "price":130,
-        "img":"https://5.imimg.com/data5/JN/RF/XM/GLADMIN-63023549/lux-charming-magnolia-bar-500x500-500x500.png",
-        "desc":"lorem epsum lorem epsum lorem epsum lorem epsum"
+        "prodName":"Lux Soap",
+        "prodPrice":130,
+        "imgUrl":"https://5.imimg.com/data5/JN/RF/XM/GLADMIN-63023549/lux-charming-magnolia-bar-500x500-500x500.png",
+        "ProdDesc":"lorem epsum lorem epsum lorem epsum lorem epsum"
     },
     {
         "id":2,
-        "name":"Shampoo",
-        "price":500,
-        "img":"https://img.freepik.com/premium-psd/white-bottle-advertising-splash-mockup_181945-770.jpg",
-        "desc":"lorem epsum lorem epsum lorem epsum lorem epsum"
+        "prodName":"Shampoo",
+        "prodPrice":500,
+        "imgUrl":"https://img.freepik.com/premium-psd/white-bottle-advertising-splash-mockup_181945-770.jpg",
+        "prodDesc":"lorem epsum lorem epsum lorem epsum lorem epsum"
     },
     {
         "id":3,
-        "name":"Mango",
-        "price":400,
-        "img":"https://wallpapercave.com/wp/wp2756455.jpg",
-        "desc":"lorem epsum lorem epsum lorem epsum lorem epsum"
+        "prodName":"Mango",
+        "prodPrice":400,
+        "imgUrl":"https://wallpapercave.com/wp/wp2756455.jpg",
+        "prodDesc":"lorem epsum lorem epsum lorem epsum lorem epsum"
     },
     {
         "id":4,
-        "name":"Onion",
-        "price":50,
-        "img":"https://media.istockphoto.com/id/480134211/photo/golden-onions-on-rustic-wooden-background.jpg?b=1&s=612x612&w=0&k=20&c=LoJbh2k4ZQ-K8NFOYOmYrFX00b7UNY7848d6ENKXETk=",
-        "desc":"lorem epsum lorem epsum lorem epsum lorem epsum"
+        "prodName":"Onion",
+        "prodPrice":50,
+        "imgUrl":"https://media.istockphoto.com/id/480134211/photo/golden-onions-on-rustic-wooden-background.jpg?b=1&s=612x612&w=0&k=20&c=LoJbh2k4ZQ-K8NFOYOmYrFX00b7UNY7848d6ENKXETk=",
+        "prodDesc":"lorem epsum lorem epsum lorem epsum lorem epsum"
     }
 ]
