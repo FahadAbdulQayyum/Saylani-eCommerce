@@ -18,6 +18,7 @@ import {
 
 } from "firebase/storage";
 
+// Retrieve component imported here
 import Retrieve from './components/retrieve/Retrieve'
 import UploadData from './components/uploadData/UploadData';
 
