@@ -10,6 +10,7 @@ import Home from './components/home/Home'
 import Product from './components/product/Product';
 // This is the firebase Storage configuration and connected to the Firebase
 import { storage } from './components/firebase/firebaseConfig'
+// These are the required stuffs for having connections with firebase
 import {
   ref,
   uploadBytesResumable,
