@@ -4,6 +4,7 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
+// Home component imported here
 import Home from './components/home/Home'
 import Product from './components/product/Product';
 // This is the firebase Storage configuration and connected to the Firebase
