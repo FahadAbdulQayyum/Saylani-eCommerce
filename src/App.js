@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+// Following the imported from 'react-router-dom' for creating the routes
 import {
   createBrowserRouter,
   RouterProvider,
