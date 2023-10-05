@@ -1,3 +1,4 @@
+// 'txtDb' is a configuration setup with firebase store which is imported from 'firebaseConfig'
 import { txtDb } from '../firebase/firebaseConfig';
 import { collection, getDocs } from 'firebase/firestore';
 
