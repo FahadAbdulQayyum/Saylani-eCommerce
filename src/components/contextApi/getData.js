@@ -1,5 +1,6 @@
 // 'txtDb' is a configuration setup with firebase store which is imported from 'firebaseConfig'
 import { txtDb } from '../firebase/firebaseConfig';
+// The function imported from firebase/firebasestore
 import { collection, getDocs } from 'firebase/firestore';
 
 export const getData = async () => {
