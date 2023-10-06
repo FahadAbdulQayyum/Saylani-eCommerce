@@ -13,5 +13,4 @@ export const getData = async () => {
     console.log('allData', allData);
     // return allData to use in another components
     return allData
-
 }
