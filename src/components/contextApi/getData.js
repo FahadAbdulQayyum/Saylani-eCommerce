@@ -11,6 +11,7 @@ export const getData = async () => {
     // Fetch all data, align them as per requirement as store them into allData variable
     const allData = dataDb.docs.map(val => ({ ...val.data(), id: val.id }))
     console.log('allData', allData);
+    // return allData to use in another components
     return allData
 
 }
