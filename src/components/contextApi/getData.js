@@ -8,6 +8,7 @@ export const getData = async () => {
     const valRef = collection(txtDb, 'txtData')
     // Get the data present in the collection and store them into dataDb
     const dataDb = await getDocs(valRef)
+    // Fetch all data, align them as per requirement as store them into allData variable
     const allData = dataDb.docs.map(val => ({ ...val.data(), id: val.id }))
     console.log('allData', allData);
     return allData
