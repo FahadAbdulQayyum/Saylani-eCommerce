@@ -7,6 +7,7 @@ import { getDownloadURL, ref, uploadBytes } from 'firebase/storage'
 // addDoc and collection imported from firestore
 import { addDoc, collection } from 'firebase/firestore';
 
+// LoadingButton from antD is imported
 import LoadingButton from '../loadingButton/LoadingButton';
 
 const UploadData = () => {
