@@ -13,12 +13,11 @@ const ProductByCategory = () => {
     }, [])
 
     const ProductByCat = ({cat, name}) => {
-        console.log('cat',cat)
         const filtered = data.filter(v=>v.prodCat === name)
-        console.log('filtered', filtered)
         return (
             <div className='relative'>
                 <h2 className='bg-teal-200 flex text-center justify-center font-bold'>{cat.prodCat === name && name}</h2>
+                {/* {cat.prodCat === name && filtered.length>1 && filtered.map(v=><span>{v.prodName}</span>)} */}
                 {cat.prodCat === name && <div className='my-5'>
                     <img className='h-36' src={cat.imgUrl}/>
                     <small>{cat.prodName}</small>
@@ -26,15 +25,7 @@ const ProductByCategory = () => {
                 </div>}
             </div>
         )
-
-        // return (
-        //     <>
-        //         {
-        //             filtered.map(v=><>{v.prodName}</>)
-        //         }
-        //     </>
-        // )
-    }
+   }
 
     return (
         <div>
