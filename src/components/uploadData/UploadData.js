@@ -4,6 +4,7 @@ import React, { useState } from 'react'
 import { storage, txtDb } from '../firebase/firebaseConfig'
 // getDownloadURL, ref and uploadBytes imported
 import { getDownloadURL, ref, uploadBytes } from 'firebase/storage'
+// addDoc and collection imported from firestore
 import { addDoc, collection } from 'firebase/firestore';
 
 import LoadingButton from '../loadingButton/LoadingButton';
