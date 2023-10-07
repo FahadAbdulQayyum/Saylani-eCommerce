@@ -1,5 +1,6 @@
 // useState imported
 import React, { useState } from 'react'
+// Storage and txtDb is imported from 'firebaseConfig' file in current project
 import { storage, txtDb } from '../firebase/firebaseConfig'
 import { getDownloadURL, ref, uploadBytes } from 'firebase/storage'
 import { addDoc, collection } from 'firebase/firestore';
