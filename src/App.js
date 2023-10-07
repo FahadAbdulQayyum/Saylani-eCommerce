@@ -1,13 +1,16 @@
 import React, { useState } from 'react'
+// Following the imported from 'react-router-dom' for creating the routes
 import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
+// Home component imported here
 import Home from './components/home/Home'
+// Product component imported here
 import Product from './components/product/Product';
 // This is the firebase Storage configuration and connected to the Firebase
-// import storage from './components/firebase/firebaseConfig'
 import { storage } from './components/firebase/firebaseConfig'
+// These are the required stuffs for having connections with firebase
 import {
   ref,
   uploadBytesResumable,
@@ -15,6 +18,7 @@ import {
 
 } from "firebase/storage";
 
+// Retrieve component imported here
 import Retrieve from './components/retrieve/Retrieve'
 import UploadData from './components/uploadData/UploadData';
 
