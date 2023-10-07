@@ -17,8 +17,6 @@ const Product = () => {
   }, [])
 
   return (
-    // <span className='grid grid-rows-3 space-x-5 m-5 '>
-    // <span className='grid space-x-5 m-5 '>
     <span className='flex space-x-5 m-5 '>
       <span className='grid grid-cols-4 gap-10'>
         {/*  Products' array is spread using map */}

@@ -1,14 +1,14 @@
 import React from 'react'
-import {Link} from 'react-router-dom'
+import Navbar from '../navbar/Navbar'
+import Product from '../product/Product'
+import ProductByCategory from '../product/ProductByCategory'
 
 const Home = () => {
   return (
-    <div>
-        <p>Home</p>
-        <button>
-            <Link to={'/product'}>Product</Link>
-        </button>
-    </div>
+    <>
+        <Navbar/>    
+        <ProductByCategory/>    
+    </>
   )
 }
 

@@ -21,19 +21,26 @@ function ImageComponent() {
   return (
     <div>
       <h1>Welcome to Retrieve Data from Firebase</h1>
+      <span className='grid grid-cols-3 gap-3'>
       {
         imagesUrl.map((v,i)=>{
           return (
             <span>
-              <img key={i} src={v?.imgUrl}/>
-              <h3>{v?.prodName}</h3>
-              <p>{v?.prodDesc}</p>
-              <h1>{v?.prodPrice}</h1>
+              {/* <div className='bg-slate-400 w-[30%] p-2 rounded'> */}
+              <div className='bg-slate-300 p-2 rounded'>
+                <img className='' key={i} src={v?.imgUrl}/>
+                <span className='flex justify-between'>
+                  <h3 className='font-bold'>{v?.prodName}</h3>
+                  <h1>{`$`+v?.prodPrice}</h1>
+                </span>
+                  <p>{v?.prodDesc}</p>
+              </div>
             </span>
           )
           // console.log('v',v)
         })
       }
+      </span>
     </div>
   );
 }

@@ -15,7 +15,8 @@ console.log('itemsss',items)
   };
 
   return (
-    <span>
+    <span className='relative'>
+      <small className='absolute top-0 z-10 right-0 bg-teal-200 px-2'>{items.prodCat}</small>
       <Card
         hoverable
         className={`w-[300px] transition duration-300 ${isHovered ? 'scale-105' : 'scale-100'}`}

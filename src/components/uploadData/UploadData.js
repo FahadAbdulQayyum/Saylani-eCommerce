@@ -11,26 +11,27 @@ const UploadData = () => {
     const [name, setName] = useState('');
     const [desc, setDesc] = useState('');
     const [price, setPrice] = useState('');
+    const [category, setCategory] = useState('');
 
     const [loading, setLoading] = useState(false);
 
     const handleUpload = () => {
-        if(!name.length && !desc.length && !price.length) return alert("First fill the info")
-        console.log('e.target.file',file.name);
-        const imgs = ref(storage, 'Imgs'+file.name)
+        if (!name.length && !desc.length && !price.length) return alert("First fill the info")
+        console.log('e.target.file', file.name);
+        const imgs = ref(storage, 'Imgs' + file.name)
         uploadBytes(imgs, file).then(data => {
             console.log('imgs', data)
-            getDownloadURL(data.ref).then(val=>{
+            getDownloadURL(data.ref).then(val => {
                 console.log('finally uploaded', val)
                 dbFunction(val, file.name)
+                setLoading(true)
             })
         })
     }
-    
+
     const dbFunction = async (imgUrl, imgTxt) => {
-        setLoading(true)
         const valRef = collection(txtDb, 'txtData')
-        await addDoc(valRef,{txtVal:imgTxt, prodName:name, prodDesc:desc, prodPrice:price ,imgUrl})
+        await addDoc(valRef, { txtVal: imgTxt, prodName: name, prodDesc: desc, prodCat: category, prodPrice: price, imgUrl })
         alert("Data Added Successfully")
         setLoading(false);
         setTimeout(() => {
@@ -38,16 +39,25 @@ const UploadData = () => {
         }, 300);
     }
 
-  return (
-    <div className='space-y-2 flex flex-col w-60'>
-        <input type='text' placeholder="Enter the product's Name" onChange={e=>setName(e?.target?.value)} value={name} className='border p-2'/>
-        <input type='text' placeholder="Enter the product's Description" onChange={e=>setDesc(e?.target?.value)} value={desc} className='border p-2'/>
-        <input type='text' placeholder="Enter the product's Price" onChange={e=>setPrice(e?.target?.value)} value={price} className='border p-2'/>
-        <input type='file' onChange={e=>setFile(e?.target?.files[0])}/>
-        {!loading?<button onClick={handleUpload} className='bg-slate-500 p-2 text-white'>Upload Product</button>        
-        :<LoadingButton/>}
-    </div>
-  )
+    console.log('category', category);
+
+    return (
+        <div className='space-y-2 flex flex-col w-60'>
+            <input type='text' placeholder="Enter the product's Name" onChange={e => setName(e?.target?.value)} value={name} className='border p-2' />
+            <input type='text' placeholder="Enter the product's Description" onChange={e => setDesc(e?.target?.value)} value={desc} className='border p-2' />
+            {/* <input type='text' placeholder="Enter the product's Category" onChange={e=>setCategory(e?.target?.value)} value={category} className='border p-2'/> */}
+            <select value={category} onChange={(e) => setCategory(e.target.value)}>
+                <option value={""} disabled>Select the product's Category</option>
+                <option value="Fruit">Fruit</option>
+                <option value="Vegetable">Vegetable</option>
+                <option value="Sweet">Sweet</option>
+            </select>
+            <input type='text' placeholder="Enter the product's Price" onChange={e => setPrice(e?.target?.value)} value={price} className='border p-2' />
+            <input type='file' onChange={e => setFile(e?.target?.files[0])} />
+            {!loading ? <button onClick={handleUpload} className='bg-slate-500 p-2 text-white'>Upload Product</button>
+                : <LoadingButton />}
+        </div>
+    )
 }
 
 export default UploadData
