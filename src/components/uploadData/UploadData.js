@@ -22,6 +22,7 @@ const UploadData = () => {
     const [loading, setLoading] = useState(false);
 
     const handleUpload = () => {
+        setLoading(true)
         if (!name.length && !desc.length && !price.length) return alert("First fill the info")
         console.log('e.target.file', file.name);
         const imgs = ref(storage, 'Imgs' + file.name)
@@ -30,7 +31,6 @@ const UploadData = () => {
             getDownloadURL(data.ref).then(val => {
                 console.log('finally uploaded', val)
                 dbFunction(val, file.name)
-                setLoading(true)
             })
         })
     }

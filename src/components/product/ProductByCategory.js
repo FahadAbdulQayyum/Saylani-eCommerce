@@ -18,12 +18,12 @@ const ProductByCategory = () => {
         console.log('filtered', filtered)
         return (
             <div className='relative'>
-                <h2 className='bg-teal-200'>{cat.prodCat === name && name}</h2>
-                {cat.prodCat === name && <span>
+                <h2 className='bg-teal-200 flex text-center justify-center font-bold'>{cat.prodCat === name && name}</h2>
+                {cat.prodCat === name && <div className='my-5'>
                     <img className='h-36' src={cat.imgUrl}/>
                     <small>{cat.prodName}</small>
-                    <small className='absolute top-5 left-0 z-10 text-white bg-orange-400 px-3'>{'$'+cat.prodPrice}</small>
-                </span>}
+                    <small className='absolute top-10 left-0 z-10 text-white bg-orange-400 px-3'>{'$'+cat.prodPrice}</small>
+                </div>}
             </div>
         )
 
