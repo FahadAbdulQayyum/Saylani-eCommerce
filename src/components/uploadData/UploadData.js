@@ -10,6 +10,7 @@ import { addDoc, collection } from 'firebase/firestore';
 // LoadingButton from antD is imported
 import LoadingButton from '../loadingButton/LoadingButton';
 
+// UploadData function starts here
 const UploadData = () => {
     const [file, setFile] = useState('');
 
