@@ -1,25 +1,28 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
+import { getData } from '../contextApi/getData';
 
 const ProductByCategory = () => {
+
     // let a = [{id:1, name:'Fahad', age:27},{id:2, name:'Aftab', age:21},{id:3, name:'Aftab', age:23},{id:4, name:'Fahad', age:24}]
-
-    // let name = a.map(v=>v.name)
-    // let unrepeatedName = [...new Set(name)]
-    // console.log('unrepeatedName',unrepeatedName)
-    // let arr = []
-    // let lets = a.map((v,i)=>{
-    //     if(v.name === unrepeatedName[i]){
-    //         arr.push({name:v.name, prod:[v]})
-    //         console.log('arr',arr)
-    //     }
-    // })
-
-    let a = [{id:1, name:'Fahad', age:27},{id:2, name:'Aftab', age:21},{id:3, name:'Aftab', age:23},{id:4, name:'Fahad', age:24}]
-
-    let unrepeatedName = [...new Set(a.map(v => v.name))];
     
-    let arr = unrepeatedName.map(name => {
-        let prod = a.filter(v => v.name === name);
+    const [data, setData] = useState([])
+
+    useEffect(() => {
+        const dataFetch = async () => {
+            let dataa = await getData()
+            setData(dataa)
+        }
+        dataFetch()
+    }, [])
+
+    // let unrepeatedName = [...new Set(a.map(v => v.name))];
+    let unrepeatedName = [...new Set(data.map(v => v.prodCat))];
+    let unrepeatedCat = unrepeatedName.filter(v=>v!==undefined)
+    
+    // let arr = unrepeatedName.map(name => {
+    let arr = unrepeatedCat.map(name => {
+        // let prod = a.filter(v => v.name === name);
+        let prod = data.filter(v => v.prodCat === name);
         return { name, prod };
     });
     
