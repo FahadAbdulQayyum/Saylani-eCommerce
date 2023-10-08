@@ -4,13 +4,25 @@ import { getData } from '../contextApi/getData';
 const ProductByCategory = () => {
     const [data, setData] = useState([])
 
+    const [categ, setCateg] = useState({
+        name:'',
+        prod: []
+    })
+
     useEffect(() => {
         const dataFetch = async () => {
             let dataa = await getData()
             setData(dataa)
+            // dataa.map(d=>setCateg({...categ, name: d.prodCat}))
+            // // setCateg({...categ, name: dataa.prodCat})
         }
         dataFetch()
     }, [])
+
+    useEffect(() => {
+        data.map(v=>setCateg({...categ, name: v.prodCat}))
+        console.log('congegg', categ)
+    },[])
 
     const dataUnduplicated = () => {
         // console.log('dataUnduplicated', [...new Set(data)])
@@ -44,15 +56,113 @@ const ProductByCategory = () => {
         )
    }
 
+//    const dataRun = () => {
+   const DataRun = () => {
+    // let wholeData = data?.map(v=> v.prodCat)
+    let wholeData = data?.map(v=> v)
+    let unRepeatedCategory = [...new Set(data?.map(v=> v.prodCat))]
+    let unrepeatedCat = unRepeatedCategory.filter(v=>v!==undefined)
+    // unrepeatedCat.forEach(ur=>setCateg({...categ, name:ur, prod.push()}))
+    // unrepeatedCat.forEach(ur=> console.log('ur===wholeData.prodCat',ur===wholeData.prodCat))
+    // unrepeatedCat.forEach(ur=> console.log('ur===wholeData.prodCat',ur,wholeData))
+
+    // unrepeatedCat.forEach(ur=> wholeData.map(v=>{
+    //     if(v.prodCat === ur){
+    //         // console.log('v.prodCat === ur', v.prodCat, ur)
+    //         console.log('v.prodCat === ur', v.prodCat, ur,v)
+    //         let arr = []
+    //         arr.push(ur)
+    //         arr.push(v)
+    //         console.log('arr',arr)
+    //     }
+    // }))
+
+    // for(var l=0;l<=unrepeatedCat.length;l++){
+    //     wholeData.map(v=>{
+    //         if(v.prodCat === unrepeatedCat[l]){
+    //             console.log('v.prodCat, unrepeatedCat['+l+'], v', v.prodCat, unrepeatedCat[l], v)
+    //             let arr = []
+    //         arr.push(unrepeatedCat[l])
+    //         arr.push(v)
+    //         console.log('arr',arr)
+    //         }
+    //     })
+    // }
+
+    // wholeData.map(v=>{if(v.prodCat === 'Vegetable'){
+    //     console.log('()()()()', v)
+    // }})
+
+    wholeData.map(v=>{if(v.prodCat === unrepeatedCat){
+        return (
+            <>
+            <img src={v.imgUrl}/>
+            </>
+        )
+    }})
+
+    // return(
+    //     <>
+    //     {
+    //         wholeData.map(v=>{
+    //             unrepeatedCat.forEach(ur=>{
+
+    //                 if(v.prodCat === ur){
+    //                 return (
+    //                     <>
+    //                     <img src={v.imgUrl}/>
+    //                     {console.log('vvvv', v.imgUrl)}
+    //                     </>
+    //                 )
+    //             }
+    //             })
+    //         console.log('elseee',v.prodCat, unrepeatedCat)
+    //     })
+    //     }
+    //     </>
+    // )
+
+    return (
+        <>
+          {wholeData.map((v) => {
+            if (unrepeatedCat.includes(v.prodCat)) {
+              return (
+                <div key={v.imgUrl}>
+                  <img src={v.imgUrl} alt={v.prodCat} />
+                  {console.log('vvvv', v.imgUrl)}
+                </div>
+              );
+            } else {
+              console.log('elseee', v.prodCat, unrepeatedCat);
+              return null; // or any other fallback JSX if needed
+            }
+          })}
+        </>
+      );
+      
+    
+    // return(
+    //     <>
+    //     {console.log('****', wholeData)}
+    //     {console.log('dataR', unRepeatedCategory)}
+    //     {console.log('unrepeatedCat', unrepeatedCat)}
+    //     </>
+    // )
+   }
+
+//    dataRun();
+
     return (
         <div>
             {
                 data.map(v=>
                     <span key={v.id}>
+                        {/* {console.log('categgg', categ)} */}
                         <h3>{v?.prodCat === 'Vegetable'}</h3>
                         <ProductByCat cat={v} name='Vegetable'/>
                         <ProductByCat cat={v} name='Sweet'/>
                         <ProductByCat cat={v} name='Fruit'/>
+                        <DataRun/>
                     </span>
                     )
             }
