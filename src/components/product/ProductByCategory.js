@@ -12,17 +12,34 @@ const ProductByCategory = () => {
         dataFetch()
     }, [])
 
+    const dataUnduplicated = () => {
+        // console.log('dataUnduplicated', [...new Set(data)])
+        // console.log('dataUnduplicated', data.map(v=>[...new Set(v.prodCat)]))
+        const uniqueProdCats = [...new Set(data.map(v => v.prodCat))];
+        console.log('uniqueProdCats', uniqueProdCats);
+        return uniqueProdCats;
+    }
+
+    // dataUnduplicated();
+    
     const ProductByCat = ({cat, name}) => {
+    // const ProductByCat = (cat,{name}) => {
         const filtered = data.filter(v=>v.prodCat === name)
+        const dataUnd = dataUnduplicated()
         return (
             <div className='relative'>
-                <h2 className='bg-teal-200 flex text-center justify-center font-bold'>{cat.prodCat === name && name}</h2>
-                {/* {cat.prodCat === name && filtered.length>1 && filtered.map(v=><span>{v.prodName}</span>)} */}
-                {cat.prodCat === name && <div className='my-5'>
+                {console.log('dataUnd', dataUnd)}
+                {/* <h2 className='bg-teal-200 flex text-center justify-center font-bold'>{dataUnd.includes(name) && cat.prodCat === name && name}</h2> */}
+                <h2 className='bg-teal-200 flex text-center justify-center font-bold'>{dataUnd.includes(name) && cat.prodCat === name && name}</h2>
+                {/* {console.log('||||---|||', cat.prodCat)} */}
+                {/* {console.log('||||---|||', cat)} */}
+                {/* {console.log('||||---|||', [...new Set(name)])} */}
+                {cat.prodCat === name && filtered.length>1 && filtered.map(v=><span>{v.prodName}</span>)}
+                {/* {cat.prodCat === name && <div className='my-5'>
                     <img className='h-36' src={cat.imgUrl}/>
                     <small>{cat.prodName}</small>
                     <small className='absolute top-10 left-0 z-10 text-white bg-orange-400 px-3'>{'$'+cat.prodPrice}</small>
-                </div>}
+                </div>} */}
             </div>
         )
    }
