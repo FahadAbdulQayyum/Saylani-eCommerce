@@ -22,6 +22,7 @@ const ProductByCategory = () => {
     let arr = unrepeatedCat.map(name => {
         // filter the data having the same category name
         let prod = data.filter(v => v.prodCat === name);
+        // Return the category name and product name
         return { name, prod };
     });
     
