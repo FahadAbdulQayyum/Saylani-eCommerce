@@ -13,6 +13,7 @@ const ProductByCategory = () => {
         dataFetch()
     }, [])
 
+    // Remove the duplicacy
     let unrepeatedName = [...new Set(data.map(v => v.prodCat))];
     let unrepeatedCat = unrepeatedName.filter(v=>v!==undefined)
     
