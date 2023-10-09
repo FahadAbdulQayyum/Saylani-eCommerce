@@ -18,9 +18,9 @@ const ProductByCategory = () => {
     // Remove the 'undefined'
     let unrepeatedCat = unrepeatedName.filter(v=>v!==undefined)
     
-    // Categorize the object based on it's splitted 
-    category
+    // Categorize the object based on it's splitted category
     let arr = unrepeatedCat.map(name => {
+        // filter the data having the same category name
         let prod = data.filter(v => v.prodCat === name);
         return { name, prod };
     });
