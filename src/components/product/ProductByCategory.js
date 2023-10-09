@@ -3,8 +3,6 @@ import { getData } from '../contextApi/getData';
 
 const ProductByCategory = () => {
 
-    // let a = [{id:1, name:'Fahad', age:27},{id:2, name:'Aftab', age:21},{id:3, name:'Aftab', age:23},{id:4, name:'Fahad', age:24}]
-    
     const [data, setData] = useState([])
 
     useEffect(() => {
