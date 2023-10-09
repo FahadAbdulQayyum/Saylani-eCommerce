@@ -26,6 +26,7 @@ const ProductByCategory = () => {
         return { name, prod };
     });
     
+    // Console the arr to notice the change
     console.log('arr', arr);
     
 
