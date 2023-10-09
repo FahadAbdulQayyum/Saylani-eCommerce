@@ -19,7 +19,6 @@ const ProductByCategory = () => {
     let unrepeatedName = [...new Set(data.map(v => v.prodCat))];
     let unrepeatedCat = unrepeatedName.filter(v=>v!==undefined)
     
-    // let arr = unrepeatedName.map(name => {
     let arr = unrepeatedCat.map(name => {
         // let prod = a.filter(v => v.name === name);
         let prod = data.filter(v => v.prodCat === name);
