@@ -15,6 +15,7 @@ const ProductByCategory = () => {
 
     // Remove the duplicacy
     let unrepeatedName = [...new Set(data.map(v => v.prodCat))];
+    // Remove the 'undefined'
     let unrepeatedCat = unrepeatedName.filter(v=>v!==undefined)
     
     let arr = unrepeatedCat.map(name => {
