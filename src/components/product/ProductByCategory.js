@@ -35,6 +35,7 @@ const ProductByCategory = () => {
   )
 }
 
+// ProductByCategory exported
 export default ProductByCategory
 
 
