@@ -1,3 +1,4 @@
+// React, useState and useEffect hooks imported from 'react'
 import React, { useState, useEffect } from 'react'
 import { getData } from '../contextApi/getData';
 
