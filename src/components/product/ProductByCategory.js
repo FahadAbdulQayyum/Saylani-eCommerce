@@ -9,6 +9,7 @@ const ProductByCategory = () => {
     // data and setData array is inititalized using useState hook
     const [data, setData] = useState([])
 
+    // useEffect used for to retrieve data prior the website appears on desktop
     useEffect(() => {
         const dataFetch = async () => {
             let dataa = await getData()
