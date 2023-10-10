@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react'
 // getData imported from 'getData ContextApi' for making it reuseable once data is retrieved
 import { getData } from '../contextApi/getData';
 
+// ProductByCategory arrow function starts here
 const ProductByCategory = () => {
 
     const [data, setData] = useState([])
