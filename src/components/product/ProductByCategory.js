@@ -1,5 +1,6 @@
 // React, useState and useEffect hooks imported from 'react'
 import React, { useState, useEffect } from 'react'
+// getData imported from 'getData ContextApi' for making it reuseable once data is retrieved
 import { getData } from '../contextApi/getData';
 
 const ProductByCategory = () => {
