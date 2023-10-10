@@ -6,6 +6,7 @@ import { getData } from '../contextApi/getData';
 // ProductByCategory arrow function starts here
 const ProductByCategory = () => {
 
+    // data and setData array is inititalized using useState hook
     const [data, setData] = useState([])
 
     useEffect(() => {
