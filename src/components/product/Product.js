@@ -15,6 +15,7 @@ const Product = () => {
   useEffect(() => {
     // dataFetch function used asynchronisly for retrieving data from firebase using getData
     const dataFetch = async () => {
+      // data from getData are temporarily stored in dataa
       let dataa = await getData()
       setData(dataa)
     }
