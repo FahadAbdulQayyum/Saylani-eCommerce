@@ -20,6 +20,7 @@ const Product = () => {
       // then dataa stored in data hook for using it globally within this component
       setData(dataa)
     }
+    // dataFetch function is called here
     dataFetch()
   }, [])
 
