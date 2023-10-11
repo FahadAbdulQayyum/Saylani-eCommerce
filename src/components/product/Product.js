@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 import Products from './products.json'
 // ProductItems imported for aligning and styling the products' array in another component for better readibility
 import ProductItems from './ProductItems';
+// getData imported from contextApi/getData for getting data from firebase
 import { getData } from '../contextApi/getData';
 
 const Product = () => {
