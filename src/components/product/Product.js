@@ -6,6 +6,7 @@ import ProductItems from './ProductItems';
 // getData imported from contextApi/getData for getting data from firebase
 import { getData } from '../contextApi/getData';
 
+// Product arrow function starts here
 const Product = () => {
   const [data, setData] = useState([])
 
