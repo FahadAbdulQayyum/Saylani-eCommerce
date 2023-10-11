@@ -8,6 +8,7 @@ import { getData } from '../contextApi/getData';
 
 // Product arrow function starts here
 const Product = () => {
+  // data and setData useState hook initialized and used for storing array of data from firebase using getData
   const [data, setData] = useState([])
 
   useEffect(() => {
