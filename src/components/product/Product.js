@@ -13,6 +13,7 @@ const Product = () => {
 
   // useEffect hook starts here for api call immediately after the browser appears
   useEffect(() => {
+    // dataFetch function used asynchronisly for retrieving data from firebase using getData
     const dataFetch = async () => {
       let dataa = await getData()
       setData(dataa)
