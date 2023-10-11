@@ -17,6 +17,7 @@ const Product = () => {
     const dataFetch = async () => {
       // data from getData are temporarily stored in dataa
       let dataa = await getData()
+      // then dataa stored in data hook for using it globally within this component
       setData(dataa)
     }
     dataFetch()
