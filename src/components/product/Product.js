@@ -24,6 +24,7 @@ const Product = () => {
   }, [])
 
   return (
+    // this flex the cards and then provide space by 5px in horizontally the marginify it by 5px
     <span className='flex space-x-5 m-5 '>
       <span className='grid grid-cols-4 gap-10'>
         {/*  Products' array is spread using map */}
