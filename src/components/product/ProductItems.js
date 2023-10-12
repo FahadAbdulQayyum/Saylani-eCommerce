@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 // Card imported from antd for using the already built smart to reuse
 import { Card } from 'antd';
 
+// ProductItems is initialized from here
 const ProductItems = ({ items }) => {
   const { Meta } = Card;
   const [isHovered, setIsHovered] = useState(false);
