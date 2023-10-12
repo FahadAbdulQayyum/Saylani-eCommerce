@@ -7,6 +7,7 @@ import { Card } from 'antd';
 const ProductItems = ({ items }) => {
   // Meta is desctructured from Card's object to use
   const { Meta } = Card;
+  // isHovered and setIsHovered useState hook is used for hovering the card over hovering
   const [isHovered, setIsHovered] = useState(false);
 
 console.log('itemsss',items)
