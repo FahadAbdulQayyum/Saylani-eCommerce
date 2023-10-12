@@ -1,3 +1,4 @@
+// React and useState hook imported from react
 import React, { useState } from 'react';
 import { Card } from 'antd';
 
