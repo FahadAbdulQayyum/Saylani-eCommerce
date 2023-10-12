@@ -5,6 +5,7 @@ import { Card } from 'antd';
 
 // ProductItems is initialized from here
 const ProductItems = ({ items }) => {
+  // Meta is desctructured from Card's object to use
   const { Meta } = Card;
   const [isHovered, setIsHovered] = useState(false);
 
