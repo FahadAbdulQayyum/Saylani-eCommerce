@@ -13,6 +13,7 @@ const ProductItems = ({ items }) => {
   // items from props is console to inspect its value
 console.log('itemsss',items)
 
+// Card's image is containerized and styled
   const imageContainerStyle = {
     backgroundImage: `url(${items.imgUrl})`,
     paddingTop: '100%', // Maintain a square aspect ratio
