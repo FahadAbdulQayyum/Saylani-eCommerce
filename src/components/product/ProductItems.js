@@ -1,5 +1,6 @@
 // React and useState hook imported from react
 import React, { useState } from 'react';
+// Card imported from antd for using the already built smart to reuse
 import { Card } from 'antd';
 
 const ProductItems = ({ items }) => {
