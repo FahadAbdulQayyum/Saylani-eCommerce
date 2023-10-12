@@ -10,6 +10,7 @@ const ProductItems = ({ items }) => {
   // isHovered and setIsHovered useState hook is used for hovering the card over hovering
   const [isHovered, setIsHovered] = useState(false);
 
+  // items from props is console to inspect its value
 console.log('itemsss',items)
 
   const imageContainerStyle = {
