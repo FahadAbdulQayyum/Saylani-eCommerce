@@ -13,6 +13,7 @@ const ProductByCategory = () => {
     // useEffect used for to retrieve data prior the website appears on desktop
     useEffect(() => {
         const dataFetch = async () => {
+            // getData's data is stored in dataa
             let dataa = await getData()
             // dataa is stored in setData hook
             setData(dataa)
