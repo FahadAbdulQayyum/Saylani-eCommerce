@@ -12,6 +12,7 @@ const ProductByCategory = () => {
 
     // useEffect used for to retrieve data prior the website appears on desktop
     useEffect(() => {
+        // dataFetch() arrow function starts here
         const dataFetch = async () => {
             // getData's data is stored in dataa
             let dataa = await getData()
