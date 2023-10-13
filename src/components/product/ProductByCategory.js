@@ -14,6 +14,7 @@ const ProductByCategory = () => {
     useEffect(() => {
         const dataFetch = async () => {
             let dataa = await getData()
+            // dataa is stored in setData hook
             setData(dataa)
         }
         // dataFetch function is called
