@@ -16,6 +16,7 @@ const ProductByCategory = () => {
             let dataa = await getData()
             setData(dataa)
         }
+        // dataFetch function is called
         dataFetch()
     }, [])
 
