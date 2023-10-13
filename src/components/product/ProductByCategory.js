@@ -32,12 +32,13 @@ const ProductByCategory = () => {
         return { name, prod };
     });
 
-    // Console the arr to notice the change
+    // Console the alignedBasedCategory to notice the change
     console.log('alignedBasedCategory', alignedBasedCategory);
 
     return (
         <div>
             {
+                // 
                 alignedBasedCategory?.map(v => <div key={v.id}>
                     <h3 className='font-bold bg-red-400 flex justify-center text-white py-2'>{v.name}</h3>
                     <p className='flex flex-row'>{v.prod.map(p => <span className='flex flex-row'><span className='grid grid-cols-2'>{
