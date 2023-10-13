@@ -42,6 +42,7 @@ const ProductByCategory = () => {
                 alignedBasedCategory?.map(v => <div key={v.id}>
                     {/* Name of product in the h3 */}
                     <h3 className='font-bold bg-red-400 flex justify-center text-white py-2'>{v.name}</h3>
+                    {/* prod array further mapped */}
                     <p className='flex flex-row'>{v.prod.map(p => <span className='flex flex-row'><span className='grid grid-cols-2'>{
                         <ProductItems key={p?.prod?.id} items={p} />
                     }</span></span>)}</p>
