@@ -14,7 +14,7 @@ import LoadingButton from '../loadingButton/LoadingButton';
 const UploadData = () => {
     // file and set Filehook is used
     const [file, setFile] = useState('');
-
+    // name and setName hook is used
     const [name, setName] = useState('');
     const [desc, setDesc] = useState('');
     const [price, setPrice] = useState('');
