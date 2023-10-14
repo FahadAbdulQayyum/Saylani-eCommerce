@@ -20,6 +20,7 @@ const UploadData = () => {
     const [desc, setDesc] = useState('');
     // price hook used
     const [price, setPrice] = useState('');
+    // category hook used
     const [category, setCategory] = useState('');
 
     const [loading, setLoading] = useState(false);
