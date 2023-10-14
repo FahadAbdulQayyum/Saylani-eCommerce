@@ -16,6 +16,7 @@ const UploadData = () => {
     const [file, setFile] = useState('');
     // name and setName hook is used
     const [name, setName] = useState('');
+    // desc usestate hook used
     const [desc, setDesc] = useState('');
     const [price, setPrice] = useState('');
     const [category, setCategory] = useState('');
