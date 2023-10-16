@@ -18,7 +18,7 @@ console.log('itemsss',items)
     // Card's backgroundImage is initialized here
     backgroundImage: `url(${items.imgUrl})`,
     paddingTop: '100%', // Maintain a square aspect ratio
-    backgroundSize: 'cover',
+    backgroundSize: 'cover', // Making the image as cover
     backgroundPosition: 'center',
   };
 
