@@ -27,6 +27,7 @@ console.log('itemsss',items)
     <span className='relative'>
       {/* Product's Category's name is place at right top */}
       <small className='absolute top-0 z-10 right-0 bg-teal-200 px-2'>{items.prodCat}</small>
+      {/* Image's card starts here */}
       <Card
         hoverable
         className={`w-[300px] transition duration-300 ${isHovered ? 'scale-105' : 'scale-100'}`}
