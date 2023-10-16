@@ -19,7 +19,7 @@ console.log('itemsss',items)
     backgroundImage: `url(${items.imgUrl})`,
     paddingTop: '100%', // Maintain a square aspect ratio
     backgroundSize: 'cover', // Making the image as cover
-    backgroundPosition: 'center',
+    backgroundPosition: 'center', // Making the image center
   };
 
   return (
