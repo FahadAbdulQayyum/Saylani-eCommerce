@@ -23,6 +23,7 @@ console.log('itemsss',items)
   };
 
   return (
+    // Making the whole container relative for anything replaceable anywhere as wished
     <span className='relative'>
       <small className='absolute top-0 z-10 right-0 bg-teal-200 px-2'>{items.prodCat}</small>
       <Card
