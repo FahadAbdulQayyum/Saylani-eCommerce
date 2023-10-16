@@ -36,6 +36,7 @@ console.log('itemsss',items)
       >
         {/* Image container starts here */}
         <div className='image-container' style={imageContainerStyle} />
+        {/* Card's container title and description is here */}
         <Meta title={items.prodName} description={items.prodDesc} />
         <span className='flex text-center'>$<Meta title={items.prodPrice} /></span>
       </Card>
