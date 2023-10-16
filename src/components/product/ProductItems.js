@@ -34,6 +34,7 @@ console.log('itemsss',items)
         onMouseEnter={()=>setIsHovered(true)}
         onMouseLeave={()=>setIsHovered(false)}
       >
+        {/* Image container starts here */}
         <div className='image-container' style={imageContainerStyle} />
         <Meta title={items.prodName} description={items.prodDesc} />
         <span className='flex text-center'>$<Meta title={items.prodPrice} /></span>
