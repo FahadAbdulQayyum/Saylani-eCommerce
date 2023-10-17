@@ -33,6 +33,7 @@ console.log('itemsss',items)
         hoverable
         // Since making the hover customized so, over hover or not hover the scale differentiates
         className={`w-[300px] transition duration-300 ${isHovered ? 'scale-105' : 'scale-100'}`}
+        // OnMouseEnter, setIsHovered is true
         onMouseEnter={()=>setIsHovered(true)}
         onMouseLeave={()=>setIsHovered(false)}
       >
