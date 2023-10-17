@@ -29,9 +29,9 @@ console.log('itemsss',items)
       <small className='absolute top-0 z-10 right-0 bg-teal-200 px-2'>{items.prodCat}</small>
       {/* Image's card starts here */}
       <Card
-      // Over hovering the image, it hovers the image by default
+        // Over hovering the image, it hovers the image by default
         hoverable
-        
+        // Since making the hover customized so, over hover or not hover the scale differentiates
         className={`w-[300px] transition duration-300 ${isHovered ? 'scale-105' : 'scale-100'}`}
         onMouseEnter={()=>setIsHovered(true)}
         onMouseLeave={()=>setIsHovered(false)}
