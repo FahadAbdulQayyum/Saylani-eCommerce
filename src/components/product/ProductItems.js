@@ -42,6 +42,7 @@ console.log('itemsss',items)
         <div className='image-container' style={imageContainerStyle} />
         {/* Card's container title and description is here */}
         <Meta title={items.prodName} description={items.prodDesc} />
+        {/* Item's price is written within title */}
         <span className='flex text-center'>$<Meta title={items.prodPrice} /></span>
       </Card>
     </span>
