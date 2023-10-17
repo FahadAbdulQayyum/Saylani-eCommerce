@@ -49,4 +49,5 @@ console.log('itemsss',items)
   );
 };
 
+// ProductItems is exported
 export default ProductItems;
