@@ -35,6 +35,7 @@ console.log('itemsss',items)
         className={`w-[300px] transition duration-300 ${isHovered ? 'scale-105' : 'scale-100'}`}
         // OnMouseEnter, setIsHovered is true
         onMouseEnter={()=>setIsHovered(true)}
+        // OnMouseLeave, setIsHovered is false
         onMouseLeave={()=>setIsHovered(false)}
       >
         {/* Image container starts here */}
