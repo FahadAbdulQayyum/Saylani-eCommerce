@@ -21,4 +21,5 @@ const storage = getStorage(app);
 // txtDb referred from getFirestore(app)
 const txtDb = getFirestore(app);
 
+// both storage and txtDb is exported
 export { storage, txtDb };
