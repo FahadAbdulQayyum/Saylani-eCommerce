@@ -3,6 +3,7 @@ import { txtDb } from '../firebase/firebaseConfig';
 // The function imported from firebase/firebasestore
 import { collection, getDocs } from 'firebase/firestore';
 
+// getData is initiallized from here and directly exported
 export const getData = async () => {
     // This gets the collection stored in the firebasestore in the name of txtDb
     const valRef = collection(txtDb, 'txtData')
