@@ -2,6 +2,7 @@
 import { initializeApp } from "firebase/app";
 // getStorage imported from firebase/Storage
 import { getStorage } from "firebase/storage";
+// getFirestore imported from 'firebase/firestore
 import { getFirestore } from 'firebase/firestore';
 
 // Initialize Firebase
