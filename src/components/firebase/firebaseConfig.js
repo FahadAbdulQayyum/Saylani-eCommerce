@@ -1,5 +1,6 @@
 // initializeApp imported from firebase/App
 import { initializeApp } from "firebase/app";
+// getStorage imported from firebase/Storage
 import { getStorage } from "firebase/storage";
 import { getFirestore } from 'firebase/firestore';
 
