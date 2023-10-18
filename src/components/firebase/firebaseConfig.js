@@ -18,6 +18,7 @@ const app = initializeApp({
 
 // Firebase storage reference
 const storage = getStorage(app);
+// txtDb referred from getFirestore(app)
 const txtDb = getFirestore(app);
 
 export { storage, txtDb };
