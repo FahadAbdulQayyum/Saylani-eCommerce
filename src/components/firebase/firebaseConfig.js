@@ -13,6 +13,7 @@ const app = initializeApp({
     authDomain: "practing-project.firebaseapp.com",
     // projectId for initializedApp defined
     projectId: "practing-project",
+    // storageBucket for initializedApp defined
     storageBucket: "practing-project.appspot.com",
     messagingSenderId: "494622875827",
     appId: "1:494622875827:web:f15d0d11eeb61a9ef590c6",
