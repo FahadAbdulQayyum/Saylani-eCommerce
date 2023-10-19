@@ -11,6 +11,7 @@ const app = initializeApp({
     apiKey: "AIzaSyAmmP8fRh9NSFMUZni9raE_1mI5BNUEYRM",
     // authDomain for initializedApp defined
     authDomain: "practing-project.firebaseapp.com",
+    // projectId for initializedApp defined
     projectId: "practing-project",
     storageBucket: "practing-project.appspot.com",
     messagingSenderId: "494622875827",
