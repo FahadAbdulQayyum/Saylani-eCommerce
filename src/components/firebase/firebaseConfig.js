@@ -9,6 +9,7 @@ import { getFirestore } from 'firebase/firestore';
 const app = initializeApp({
     // apiKey for initializedApp defined
     apiKey: "AIzaSyAmmP8fRh9NSFMUZni9raE_1mI5BNUEYRM",
+    // authDomain for initializedApp defined
     authDomain: "practing-project.firebaseapp.com",
     projectId: "practing-project",
     storageBucket: "practing-project.appspot.com",
