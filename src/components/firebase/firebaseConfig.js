@@ -7,6 +7,7 @@ import { getFirestore } from 'firebase/firestore';
 
 // Initialize Firebase with their unique configuration
 const app = initializeApp({
+    // apiKey for initializedApp defined
     apiKey: "AIzaSyAmmP8fRh9NSFMUZni9raE_1mI5BNUEYRM",
     authDomain: "practing-project.firebaseapp.com",
     projectId: "practing-project",
