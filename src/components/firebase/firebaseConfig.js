@@ -15,6 +15,7 @@ const app = initializeApp({
     projectId: "practing-project",
     // storageBucket for initializedApp defined
     storageBucket: "practing-project.appspot.com",
+    // messagingSenderId for initializedApp defined
     messagingSenderId: "494622875827",
     appId: "1:494622875827:web:f15d0d11eeb61a9ef590c6",
     measurementId: "G-8YBP5V3FRD"
