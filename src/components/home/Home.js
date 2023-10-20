@@ -19,4 +19,5 @@ const Home = () => {
   )
 }
 
+// HomePage is exported here
 export default Home
