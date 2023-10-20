@@ -13,6 +13,7 @@ const Home = () => {
     <>
         {/* Navbar is placed first in HomePage */}
         <Navbar/>    
+        {/* ProductByCategory is placed second in HomePage */}
         <ProductByCategory/>    
     </>
   )
