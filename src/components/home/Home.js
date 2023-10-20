@@ -1,3 +1,4 @@
+// React is imported from 'react';
 import React from 'react'
 import Navbar from '../navbar/Navbar'
 import Product from '../product/Product'
