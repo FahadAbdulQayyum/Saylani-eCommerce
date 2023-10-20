@@ -7,6 +7,7 @@ import Product from '../product/Product'
 // ProductByCategory is imported from '../product/ProductByCategory'
 import ProductByCategory from '../product/ProductByCategory'
 
+// HomePage starts here
 const Home = () => {
   return (
     <>
