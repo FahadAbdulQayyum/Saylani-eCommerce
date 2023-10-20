@@ -18,6 +18,7 @@ const Home = () => {
     </>
   )
 }
+// HomePage ends here
 
 // HomePage is exported here
 export default Home
