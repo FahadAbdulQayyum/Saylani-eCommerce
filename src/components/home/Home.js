@@ -11,6 +11,7 @@ import ProductByCategory from '../product/ProductByCategory'
 const Home = () => {
   return (
     <>
+        {/* Navbar is placed first in HomePage */}
         <Navbar/>    
         <ProductByCategory/>    
     </>
