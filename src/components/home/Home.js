@@ -4,6 +4,7 @@ import React from 'react'
 import Navbar from '../navbar/Navbar'
 // Product is imported from '../product/Product' directory
 import Product from '../product/Product'
+// ProductByCategory is imported from '../product/ProductByCategory'
 import ProductByCategory from '../product/ProductByCategory'
 
 const Home = () => {
